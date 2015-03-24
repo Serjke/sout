@@ -588,8 +588,10 @@ input[type="submit"] {
   }
   &.green {
     background: #52b266;
+    border: 1px solid tranparent;
     &:hover {
       color: #fff;
+      border: 1px solid tranparent;
     }
   }
 
