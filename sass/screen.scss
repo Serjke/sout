@@ -502,8 +502,10 @@ input[type="submit"] {
 
 }
 .bt {
+
   padding: 10px 24px;
   font-size: 17px;
+  line-height: normal;
   background-color: #219cc5;
   white-space: nowrap;
   color: #fff;
@@ -515,6 +517,11 @@ input[type="submit"] {
     color: #219cc5;
     background-color: #fff;
     border-color: #219cc5;
+  }
+  &.small {
+    font-size: 15px;
+    padding: 8px 20px;
+
   }
   &.square {
     @include border-radius(4px);
@@ -895,6 +902,12 @@ ul.list {
     }
     &:last-child {
       white-space: normal;
+    }
+    &.align-r {
+      padding-right: 0;
+    }
+    &.v-middle {
+      vertical-align: middle;
     }
   }
 }
