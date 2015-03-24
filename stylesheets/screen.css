@@ -759,12 +759,12 @@ input[type="submit"] {
 /* line 589, ../sass/screen.scss */
 .bt.green {
   background: #52b266;
-  border: 1px solid tranparent;
+  border: 1px solid transparent;
 }
 /* line 592, ../sass/screen.scss */
 .bt.green:hover {
   color: #fff;
-  border: 1px solid tranparent;
+  border: 1px solid transparent;
 }
 
 /* line 599, ../sass/screen.scss */
