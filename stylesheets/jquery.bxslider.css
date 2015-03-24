@@ -101,12 +101,12 @@
 /* DIRECTION CONTROLS (NEXT / PREV) */
 
 .bx-wrapper .bx-prev {
-	left: -150px;
+	left: -90px;
 	background: url(../img/controls.png) no-repeat 0 0;
 }
 
 .bx-wrapper .bx-next {
-	right: -150px;
+	right: -90px;
 	background: url(../img/controls.png) no-repeat -43px 0;
 }
 

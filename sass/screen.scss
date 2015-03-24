@@ -7,12 +7,20 @@
 @import "compass/css3";
 @import "compass/css3/selection";
 @import "compass/utilities/general/clearfix";
+
 * {
   @include box-sizing(border-box);
   @include selection(#dcdcdc, #000);
   -webkit-text-size-adjust:none;
   -webkit-tap-highlight-color:rgba(0,0,0,0);
   outline:0;
+}
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+     -webkit-appearance: none;
+     border-radius: 0;
 }
 @mixin legacy-pie-clearfix {
   &:after {
@@ -184,7 +192,7 @@ input[type="submit"] {
     input[type="text"] {
       @include border-radius(4px 0 0 4px);
 //      min-width: 200px;
-      min-width: 240px;
+      min-width: 230px;
 //      width: 100%;
       float: left;
     }
@@ -290,6 +298,10 @@ input[type="submit"] {
     float: left;
 
   }
+  .bt {
+  font-size: 15px;
+  padding: 6px 14px;
+  }
   .sidebar {
     width: (100% / 3);
     h2 {
@@ -381,7 +393,7 @@ input[type="submit"] {
     line-height: 1.5;
     float: none;
     .inline {
-      margin-left: 20px;
+      margin-left: 12px;
     }
     .rcol {
     margin-left: 20px;
@@ -394,7 +406,7 @@ input[type="submit"] {
         font-size: 15px;
         font-family: 'PT Sans', sans-serif;
         font-weight: bold;
-        margin-left: 8px;
+        margin-left: 6px;
       }
     }
     .row {
@@ -938,7 +950,7 @@ ul.list {
     &.v-middle {
       vertical-align: middle;
       &.align-r:last-child {
-        min-width: 151px;
+        min-width: 134px;
       }
     }
   }
