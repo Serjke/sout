@@ -5,10 +5,14 @@
 
 @import "compass/reset";
 @import "compass/css3";
+@import "compass/css3/selection";
 @import "compass/utilities/general/clearfix";
 * {
   @include box-sizing(border-box);
-//  @include selection(#dcdcdc, #000);
+  @include selection(#dcdcdc, #000);
+  -webkit-text-size-adjust:none;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  outline:0;
 }
 @mixin legacy-pie-clearfix {
   &:after {
@@ -20,6 +24,16 @@
     visibility: hidden;
   }
   @include has-layout;
+}
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 1px solid rgba(#219CC5, 0.6);
+    @include box-shadow(0 0 6px rgba(#219CC5, 0.4));
+    @include border-radius(4px);
+}
+input[type='submit']:focus {
+  outline: none;
 }
 body {
   font-size: 15px;
@@ -56,6 +70,9 @@ b, strong {
 }
 a {
   color: #219cc5;
+  &:hover {
+   color: #000;
+  }
 }
 
 p {
@@ -289,16 +306,23 @@ input[type="submit"] {
       margin-bottom: 40px;
       font-weight: bold;
       li {
-
-
-              a {
-              display: inline-block;
-              padding: 8px 16px;
-             text-decoration: none;
-              }
-                    &.active a{
+      margin-bottom: 4px;
+         a {
+           display: inline-block;
+           padding: 8px 16px;
+           text-decoration: none;
+           @include border-radius(16px);
+           border: 1px solid tranparent;
+           &:hover {
+            background: #219CC5;
+            color: #fff;
+           }
+          }
+        &.active a{
         border: 1px solid #000;
-        @include border-radius(16px);
+        background: none;
+        color: #000;
+        
       }
       }
     }
@@ -357,8 +381,10 @@ input[type="submit"] {
     line-height: 1.5;
     float: none;
     .inline {
-      vertical-align: middle;
       margin-left: 20px;
+    }
+    .rcol {
+    margin-left: 20px;
     }
     .title {
       > * {
@@ -384,7 +410,9 @@ input[type="submit"] {
     padding-top: 47px;
     .row {
       margin-bottom: 50px;
-      overflow: hidden;
+      &.ovh {
+        overflow: hidden;
+      }
     }
   }
   .col.m235 {
@@ -810,6 +838,7 @@ input[type="submit"] {
 
   p {
   margin-top: 0;
+  line-height: 1.5;
     &.mtop {
       margin-top: 11px;
     }
@@ -908,6 +937,9 @@ ul.list {
     }
     &.v-middle {
       vertical-align: middle;
+      &.align-r:last-child {
+        min-width: 151px;
+      }
     }
   }
 }
@@ -1126,5 +1158,11 @@ textarea.w80 {
   text-decoration: none;
   i {
     margin-right: 8px;
+  }
+}
+.hidden {
+  display: none;
+  p:last-child {
+    margin-bottom: 0;
   }
 }
