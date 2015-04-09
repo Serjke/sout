@@ -66,7 +66,6 @@ input[type="password"] {
   height: 41px;
   line-height: 1.2;
 }
-
 textarea {
   padding:18px;
   border: 1px solid #9a9a9a;
@@ -194,6 +193,21 @@ input[type="submit"] {
     padding-top: 30px;
     padding-bottom: 30px;
 //    width: 1%;
+  }
+  .head-top {
+
+    .user-links {
+      ul {
+        white-space: nowrap; 
+        li {
+          display: inline-block;
+          margin-left: 4px;
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
   }
   .search {
     width: 100%;
@@ -1221,7 +1235,7 @@ textarea.w80 {
   margin-left: 8px;
   }
   #head .logo {
-  padding-right: 20px;
+  padding-right: 16px;
   }
   #head .search input[type="text"] {
       min-width: 200px;
